@@ -1,13 +1,10 @@
 module.exports = {
-  files: ["*.ts", "*.tsx"],
+  root: true,
   env: {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
+  extends: ['plugin:react/recommended', 'airbnb'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -16,10 +13,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
+  plugins: ['react', '@typescript-eslint'],
+  rules: {},
+  overrides: [
+    {
+      include: ['*.tsx', '*.ts'],
+    },
   ],
-  rules: {
-  },
 };
