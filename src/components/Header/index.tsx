@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Header() {
   return (
     <nav className="w-full fixed">
@@ -7,7 +9,7 @@ function Header() {
         <li>contact</li>
       </ul>
     </nav>
-  )
+  );
 }
 
-export default Header
+export default Header;

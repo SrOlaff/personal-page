@@ -1,9 +1,12 @@
-import './App.css';
+import React from 'react';
+import Header from './components/Header';
+import Home from './screens/Home';
 
 function App() {
   return (
-    <div className="w-screen h-screen bg-background flex justify-center items-center">
-        <h1 className="text-accent text-center text-6xl font-bold ">Hello World!</h1>
+    <div className="bg-background w-screen h-screen">
+      <Header />
+      <Home />
     </div>
   );
 }
