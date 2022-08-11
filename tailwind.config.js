@@ -1,17 +1,17 @@
 /** @type {import('tailwindcss').Config} */
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
-  content: ['./src/**/*.{ts,tsx}'],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        background: '#424242',
-        accent: '#F37748',
-        text: '#FFFCF7',
+        background: "#424242",
+        accent: "#F37748",
+        text: "#FFFCF7",
       },
       fontFamily: {
-        sans: ['IBM Plex Mono', ...defaultTheme.fontFamily.sans],
+        sans: ["IBM Plex Mono", ...defaultTheme.fontFamily.sans],
       },
     },
   },
