@@ -27,6 +27,7 @@
     },
     "rules": {
         "react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
+        "no-unused-vars": "warn",
         "import/extensions": [
             "error",
             "ignorePackages",
