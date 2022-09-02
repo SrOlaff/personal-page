@@ -3,8 +3,15 @@
 @tailwind utilities;
 
 body {
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+.active {
+  color: #FFFCF7;
+
+  @media (min-width: 768px) {
+    color: #F37748;
+  }
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import {
   navItemAnimation,
@@ -19,7 +20,7 @@ function Header({ toggle, isOpen }: HeaderProps) {
     <>
       <nav className="container mx-auto">
         <motion.ul
-          className="hidden md:flex fixed backdrop-blur-md z-10 container text-white justify-end space-x-14 text-2xl py-8 px-10"
+          className="hidden md:flex fixed backdrop-blur-sm z-10 container text-white justify-end space-x-14 text-2xl py-8 px-10"
           initial="hidden"
           animate="show"
           transition={{
@@ -28,9 +29,39 @@ function Header({ toggle, isOpen }: HeaderProps) {
             duration: 1,
           }}
         >
-          <motion.li variants={navItemAnimation}>home</motion.li>
-          <motion.li variants={navItemAnimation}>me</motion.li>
-          <motion.li variants={navItemAnimation}>contact</motion.li>
+          <motion.li variants={navItemAnimation}>
+            <Link
+              className="cursor-pointer transition-colors duration-200"
+              to="home"
+              activeClass="active"
+              spy
+              smooth
+            >
+              home
+            </Link>
+          </motion.li>
+          <motion.li variants={navItemAnimation}>
+            <Link
+              className="cursor-pointer transition-colors duration-200"
+              to="me"
+              activeClass="active"
+              spy
+              smooth
+            >
+              me
+            </Link>
+          </motion.li>
+          <motion.li variants={navItemAnimation}>
+            <Link
+              className="cursor-pointer transition-colors duration-200"
+              to="contact"
+              activeClass="active"
+              spy
+              smooth
+            >
+              contact
+            </Link>
+          </motion.li>
         </motion.ul>
       </nav>
 
@@ -64,10 +95,43 @@ function Header({ toggle, isOpen }: HeaderProps) {
         transition={{ ease: "easeIn", duration: 0.4 }}
         className="md:hidden fixed w-3/4 h-screen right-0 top-0 z-20 flex justify-center items-center bg-accent"
       >
-        <ul className="space-y-10 text-text text-2xl">
-          <p>home</p>
-          <p>me</p>
-          <p>contact</p>
+        <ul className="space-y-10 text-background text-2xl">
+          <li>
+            <Link
+              smooth
+              onClick={() => toggle()}
+              className="transition-colors duration-200"
+              to="home"
+              activeClass="active"
+              spy
+            >
+              home
+            </Link>
+          </li>
+          <li>
+            <Link
+              smooth
+              onClick={() => toggle()}
+              className="transition-colors duration-200"
+              to="me"
+              activeClass="active"
+              spy
+            >
+              me
+            </Link>
+          </li>
+          <li>
+            <Link
+              smooth
+              onClick={() => toggle()}
+              className="transition-colors duration-200"
+              to="contact"
+              activeClass="active"
+              spy
+            >
+              contact
+            </Link>
+          </li>
         </ul>
       </motion.aside>
     </>
