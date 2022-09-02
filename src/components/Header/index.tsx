@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Link, animateScroll as scroll } from "react-scroll";
+import Link from "../Link";
 
 import {
   navItemAnimation,
@@ -30,37 +30,13 @@ function Header({ toggle, isOpen }: HeaderProps) {
           }}
         >
           <motion.li variants={navItemAnimation}>
-            <Link
-              className="cursor-pointer transition-colors duration-200"
-              to="home"
-              activeClass="active"
-              spy
-              smooth
-            >
-              home
-            </Link>
+            <Link to="home">home</Link>
           </motion.li>
           <motion.li variants={navItemAnimation}>
-            <Link
-              className="cursor-pointer transition-colors duration-200"
-              to="me"
-              activeClass="active"
-              spy
-              smooth
-            >
-              me
-            </Link>
+            <Link to="me">me</Link>
           </motion.li>
           <motion.li variants={navItemAnimation}>
-            <Link
-              className="cursor-pointer transition-colors duration-200"
-              to="contact"
-              activeClass="active"
-              spy
-              smooth
-            >
-              contact
-            </Link>
+            <Link to="contact">contact</Link>
           </motion.li>
         </motion.ul>
       </nav>
@@ -97,38 +73,17 @@ function Header({ toggle, isOpen }: HeaderProps) {
       >
         <ul className="space-y-10 text-background text-2xl">
           <li>
-            <Link
-              smooth
-              onClick={() => toggle()}
-              className="transition-colors duration-200"
-              to="home"
-              activeClass="active"
-              spy
-            >
+            <Link to="home" onClick={() => toggle()}>
               home
             </Link>
           </li>
           <li>
-            <Link
-              smooth
-              onClick={() => toggle()}
-              className="transition-colors duration-200"
-              to="me"
-              activeClass="active"
-              spy
-            >
+            <Link to="me" onClick={() => toggle()}>
               me
             </Link>
           </li>
           <li>
-            <Link
-              smooth
-              onClick={() => toggle()}
-              className="transition-colors duration-200"
-              to="contact"
-              activeClass="active"
-              spy
-            >
+            <Link to="contact" onClick={() => toggle()}>
               contact
             </Link>
           </li>
