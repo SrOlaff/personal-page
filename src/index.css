@@ -11,7 +11,11 @@ body {
 .active {
   color: #FFFCF7;
 
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
+  .active {
     color: #F37748;
   }
+
 }
