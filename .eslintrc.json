@@ -21,20 +21,28 @@
         "@typescript-eslint"
     ],
     "settings": {
-      "import/resolver": {
-        "typescript": {}
-      }
+        "import/resolver": {
+            "typescript": {}
+        }
     },
     "rules": {
-        "react/jsx-filename-extension": [ "warn", {"extensions": [".tsx"]} ],
+        "react/jsx-filename-extension": [
+            "warn",
+            {
+                "extensions": [
+                    ".tsx"
+                ]
+            }
+        ],
         "no-unused-vars": "warn",
         "import/extensions": [
             "error",
             "ignorePackages",
             {
-            "ts": "never",
-            "tsx": "never"
+                "ts": "never",
+                "tsx": "never"
             }
-    ]
+        ],
+        "react/jsx-props-no-spreading": "off"
     }
 }
