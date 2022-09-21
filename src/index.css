@@ -7,13 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 
 .active {
   color: #FFFCF7;
 
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .active {
     color: #F37748;
   }

@@ -20,14 +20,10 @@ function Header({ toggle, isOpen }: HeaderProps) {
     <>
       <nav className="container mx-auto">
         <motion.ul
-          className="hidden md:flex fixed backdrop-blur-sm z-10 container text-white justify-end space-x-14 text-2xl py-8 px-10"
+          className="hidden lg:flex fixed backdrop-blur-sm z-10 container text-white justify-end space-x-14 text-2xl py-8 px-10"
           initial="hidden"
           animate="show"
-          transition={{
-            staggerChildren: 0.3,
-            type: "tween",
-            duration: 1,
-          }}
+          transition={{ staggerChildren: 0.2 }}
         >
           <motion.li variants={navItemAnimation}>
             <Link to="home">home</Link>
@@ -41,7 +37,7 @@ function Header({ toggle, isOpen }: HeaderProps) {
         </motion.ul>
       </nav>
 
-      <nav className="md:hidden fixed right-0 mt-8 mr-5 z-30 ">
+      <nav className="lg:hidden fixed right-0 mt-8 mr-5 z-30 ">
         <button type="button" className="w-10 px-1 " onClick={() => toggle()}>
           <motion.div
             className={hamburgerBars}
@@ -69,7 +65,7 @@ function Header({ toggle, isOpen }: HeaderProps) {
         initial="hidden"
         animate={isOpen ? "show" : "hidden"}
         transition={{ ease: "easeIn", duration: 0.4 }}
-        className="md:hidden fixed w-3/4 h-screen right-0 top-0 z-20 flex justify-center items-center bg-accent"
+        className="lg:hidden fixed w-3/4 h-screen right-0 top-0 z-20 flex justify-center items-center bg-accent"
       >
         <ul className="space-y-10 text-background text-2xl">
           <li>
