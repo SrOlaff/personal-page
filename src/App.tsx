@@ -18,9 +18,9 @@ function App() {
           isMobileMenuOpen && "blur"
         }`}
       >
-        <div className="h-screen w-screen bg-backgroudn flex justify-center items-center">
-          <h1>Hello World</h1>
-        </div>
+        <Home />
+        <div className="h-screen w-screen bg-red-900" id="me" />
+        <div className="h-screen w-screen bg-blue-900" id="contact" />
       </motion.div>
     </div>
   );
