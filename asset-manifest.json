@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/pedroolavo.dev/static/css/main.648fb580.css",
-    "main.js": "/pedroolavo.dev/static/js/main.eca39483.js",
-    "index.html": "/pedroolavo.dev/index.html",
-    "main.648fb580.css.map": "/pedroolavo.dev/static/css/main.648fb580.css.map",
-    "main.eca39483.js.map": "/pedroolavo.dev/static/js/main.eca39483.js.map"
+    "main.css": "/static/css/main.648fb580.css",
+    "main.js": "/static/js/main.eca39483.js",
+    "index.html": "/index.html",
+    "main.648fb580.css.map": "/static/css/main.648fb580.css.map",
+    "main.eca39483.js.map": "/static/js/main.eca39483.js.map"
   },
   "entrypoints": [
     "static/css/main.648fb580.css",
