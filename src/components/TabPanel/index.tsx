@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Experience, experiences } from "./experiences";
 import ListItem from "./ListItem";
+import SkillPill from "./SkillPill";
 
 function TabPanel() {
   const [experienceSelected, setExperienceSelected] = useState<Experience>(
@@ -8,32 +9,43 @@ function TabPanel() {
   );
 
   return (
-    <div className="flex flex-1 flex-col lg:flex-row ">
-      <ul className="h-14 flex lg:flex-col lg:w-1/3 lg:h-full">
-        {experiences.map((item) => (
-          <ListItem
-            title={item.company}
-            isSelected={item === experienceSelected}
-            onClick={() => setExperienceSelected(item)}
-          />
-        ))}
-      </ul>
+    <div className="h-full lg:grid lg:h-3/5 lg:grid-cols-3 lg:grid-rows-1 xl:h-3/4">
+      <div className="flex h-16 lg:block lg:h-auto">
+        {experiences.map((experience) => {
+          return (
+            <ListItem
+              title={experience.company}
+              isSelected={experience === experienceSelected}
+              onClick={() => setExperienceSelected(experience)}
+            />
+          );
+        })}
+      </div>
 
-      <div className="flex flex-col py-5 lg:px-8 ">
-        <h1 className="text-2xl font-bold text-center text-accent">
-          {experienceSelected.company}
-        </h1>
+      <div className="lg:col-span-2 lg:grid lg:grid-rows-5">
+        <div className="text center row-span-3 py-5 lg:py-0 lg:px-6 lg:pb-5">
+          <h1 className="text-center text-2xl font-bold text-accent xl:text-3xl 2xl:text-4xl">
+            {experienceSelected.company}
+          </h1>
+          <h2 className="mb-5 text-center text-sm font-medium text-text opacity-40 xl:text-base 2xl:text-lg">
+            {experienceSelected.period}
+          </h2>
+          <p className="text-justify text-text xl:text-lg 2xl:text-2xl">
+            {experienceSelected.description}
+          </p>
+        </div>
 
-        <h2 className="text-sm font-medium text-center mb-5 text-text opacity-40">
-          {experienceSelected.period}
-        </h2>
+        <div className="row-span-2 text-center">
+          <h1 className="mb-5 text-center text-2xl font-bold text-accent xl:text-3xl 2xl:text-4xl">
+            Skills
+          </h1>
 
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum saepe
-          reprehenderit, magni quibusdam exercitationem ea culpa reiciendis iure
-          veniam? Corrupti nemo consectetur laborum voluptates dicta et illum
-          perspiciatis facere temporibus.
-        </p>
+          <div className="grid grid-cols-2 place-content-center gap-2 lg:grid-cols-3 lg:gap-4 lg:px-6">
+            {experienceSelected.skills.map((skill) => (
+              <SkillPill name={skill} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
