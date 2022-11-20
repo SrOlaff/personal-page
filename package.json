@@ -1,7 +1,7 @@
 {
   "name": "personal-page-project",
   "version": "0.1.0",
-  "homepage": "http://pedroolavo.dev",
+  "homepage": "https://srolaff.github.io/personal-page/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
