@@ -1,6 +1,7 @@
 import React from "react";
+import { motion, Variants } from "framer-motion";
 import { IconBaseProps } from "react-icons";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 const SOCIAL_MEDIA_ICONS = {
   github: {
@@ -11,26 +12,32 @@ const SOCIAL_MEDIA_ICONS = {
     Component: (props?: IconBaseProps) => <FaLinkedin {...props} />,
     link: "https://linkedin.com/in/pedroolavo",
   },
+  email: {
+    Component: (props?: IconBaseProps) => <FaEnvelope {...props} />,
+    link: "https://linkedin.com/in/pedroolavo",
+  },
 };
 
-type SocialMediaIcons = "github" | "linkedin";
+type SocialMediaIcons = "github" | "linkedin" | "email";
 
 interface SocialMediaButtonProps {
   iconName: SocialMediaIcons;
+  animation?: Variants;
 }
 
-function SocialMediaButton({ iconName }: SocialMediaButtonProps) {
+function SocialMediaButton({ iconName, animation }: SocialMediaButtonProps) {
   const SocialMediaIcon = SOCIAL_MEDIA_ICONS[iconName];
 
   return (
-    <a
+    <motion.a
+      variants={animation}
       href={SocialMediaIcon.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex justify-center items-center p-4 2xl:p-5 mr-3 rounded-full bg-surface hover:opacity-70 transition-all duration-200"
+      className="mr-3 flex w-fit items-center justify-center rounded-full bg-surface p-4 transition-all duration-200 hover:opacity-70 2xl:p-5"
     >
-      <SocialMediaIcon.Component className="text-text text-2xl 2xl:text-3xl" />
-    </a>
+      <SocialMediaIcon.Component className="text-2xl text-text 2xl:text-3xl" />
+    </motion.a>
   );
 }
 
