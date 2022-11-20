@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Link from "../Link";
 
@@ -16,28 +16,52 @@ interface HeaderProps {
 function Header({ toggle, isOpen }: HeaderProps) {
   const hamburgerBars = "w-full h-0.5 mt-1.5 bg-text rounded-full";
 
+  const [atBottom, setIsAtBottom] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isAtBottom =
+        Math.ceil(window.innerHeight + window.scrollY) >=
+        document.documentElement.scrollHeight;
+
+      setIsAtBottom(isAtBottom);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <nav className="container mx-auto">
         <motion.ul
-          className="hidden lg:flex fixed backdrop-blur-sm z-10 container text-white justify-end space-x-14 text-2xl py-8 px-10"
+          className="container fixed z-10 hidden justify-end space-x-14 py-8 px-10 text-2xl text-white backdrop-blur-sm lg:flex"
           initial="hidden"
           animate="show"
           transition={{ staggerChildren: 0.2 }}
         >
           <motion.li variants={navItemAnimation}>
-            <Link to="home">home</Link>
+            <Link to="home" activeClass={!atBottom ? "active" : " "}>
+              home
+            </Link>
           </motion.li>
           <motion.li variants={navItemAnimation}>
-            <Link to="me">me</Link>
+            <Link to="me" activeClass={!atBottom ? "active" : " "}>
+              me
+            </Link>
           </motion.li>
           <motion.li variants={navItemAnimation}>
-            <Link to="contact">contact</Link>
+            <Link to="contact" className={atBottom ? "active" : ""}>
+              contact
+            </Link>
           </motion.li>
         </motion.ul>
       </nav>
 
-      <nav className="lg:hidden fixed right-0 mt-8 mr-5 z-30 ">
+      <nav className="fixed right-0 z-30 mt-8 mr-5 lg:hidden ">
         <button type="button" className="w-10 px-1 " onClick={() => toggle()}>
           <motion.div
             className={hamburgerBars}
@@ -65,21 +89,33 @@ function Header({ toggle, isOpen }: HeaderProps) {
         initial="hidden"
         animate={isOpen ? "show" : "hidden"}
         transition={{ ease: "easeIn", duration: 0.4 }}
-        className="lg:hidden fixed w-3/4 h-screen right-0 top-0 z-20 flex justify-center items-center bg-accent"
+        className="fixed right-0 top-0 z-20 flex h-screen w-3/4 items-center justify-center bg-accent lg:hidden"
       >
-        <ul className="space-y-10 text-background text-2xl">
+        <ul className="space-y-10 text-2xl text-background">
           <li>
-            <Link to="home" onClick={() => toggle()}>
+            <Link
+              to="home"
+              onClick={() => toggle()}
+              activeClass={!atBottom ? "active" : " "}
+            >
               home
             </Link>
           </li>
           <li>
-            <Link to="me" onClick={() => toggle()}>
+            <Link
+              to="me"
+              onClick={() => toggle()}
+              activeClass={!atBottom ? "active" : " "}
+            >
               me
             </Link>
           </li>
           <li>
-            <Link to="contact" onClick={() => toggle()}>
+            <Link
+              to="contact"
+              onClick={() => toggle()}
+              className={atBottom ? "active" : ""}
+            >
               contact
             </Link>
           </li>
