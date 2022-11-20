@@ -16,10 +16,10 @@ function Home() {
 
   return (
     <div
-      className="h-screen container mx-auto flex portrait:flex-col-reverse landscape:flex-row"
+      className="container mx-auto flex h-screen portrait:flex-col-reverse landscape:flex-row"
       id="home"
     >
-      <div className="flex lg:flex-1 portrait:h-1/3 landscape:h-full justify-center lg:items-center ">
+      <div className="flex justify-center lg:flex-1 lg:items-center portrait:h-1/3 landscape:h-full ">
         <motion.div
           transition={{
             delayChildren: 1.5,
@@ -27,7 +27,7 @@ function Home() {
           }}
           initial="hidden"
           animate="show"
-          className="text-text space-y-3 flex text-center flex-col items-center landscape:justify-center portrait:pt-3 text-3xl sm:text-4xl md:portrait:text-5xl lg:text-5xl 2xl:text-7xl"
+          className="flex flex-col items-center space-y-3 text-center text-3xl text-text sm:text-4xl lg:text-5xl 2xl:text-7xl portrait:pt-3 md:portrait:text-5xl landscape:justify-center"
         >
           <motion.h1 variants={typographyAnimation}>
             HELLO<span className="text-accent">!</span>
@@ -39,7 +39,7 @@ function Home() {
 
           <motion.h1
             variants={typographyAnimation}
-            className="text-base md:text-lg xl:text-xl 2xl:text-2xl text-accent"
+            className="text-base text-accent md:text-lg xl:text-xl 2xl:text-2xl"
           >
             <span className="pr-2 text-text">{"<"}</span>
             software developer
@@ -50,7 +50,7 @@ function Home() {
 
       <div className="flex flex-1 justify-center portrait:items-end ">
         <motion.img
-          className="w-full md:w-3/4 lg:w-full opacity-0"
+          className="w-full opacity-0 md:w-3/4 lg:w-full"
           src="/pc-guy.svg"
           alt="Person with a laptop on his lap"
           initial="hidden"
