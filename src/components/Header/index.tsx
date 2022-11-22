@@ -54,7 +54,7 @@ function Header({ toggle, isOpen }: HeaderProps) {
             </Link>
           </motion.li>
           <motion.li variants={navItemAnimation}>
-            <Link to="contact" className={atBottom ? "active" : ""}>
+            <Link to="contact" {...(atBottom && { forceActive: true })}>
               contact
             </Link>
           </motion.li>
