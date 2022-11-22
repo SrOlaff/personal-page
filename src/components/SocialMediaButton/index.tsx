@@ -6,7 +6,7 @@ import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 const SOCIAL_MEDIA_ICONS = {
   github: {
     Component: (props?: IconBaseProps) => <FaGithub {...props} />,
-    link: "https://github.com/SrOlaff",
+    link: "https://github.com/pedro-olavo",
   },
   linkedin: {
     Component: (props?: IconBaseProps) => <FaLinkedin {...props} />,
