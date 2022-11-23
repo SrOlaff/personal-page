@@ -15,7 +15,7 @@ function ListItem({ title, isSelected, onClick }: ListItemProps) {
     >
       <button
         type="button"
-        className="flex flex-1 items-center justify-center px-2 text-lg font-medium transition-all duration-200 xl:text-xl 2xl:text-2xl"
+        className="flex flex-1 items-center justify-center px-2 text-lg font-medium transition-all duration-200 xl:text-xl "
         onClick={onClick}
       >
         {title}
