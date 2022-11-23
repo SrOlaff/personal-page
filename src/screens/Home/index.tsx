@@ -50,7 +50,7 @@ function Home() {
 
       <div className="flex flex-1 justify-center portrait:items-end ">
         <motion.img
-          className="w-full opacity-0 md:w-3/4 lg:w-full"
+          className="w-full opacity-0 md:w-3/4 lg:w-full 2xl:w-10/12"
           src="/pc-guy.svg"
           alt="Person with a laptop on his lap"
           initial="hidden"
