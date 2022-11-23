@@ -22,18 +22,21 @@ function Contact() {
             variants={typographyAnimations}
             className="mb-5 text-center text-3xl font-bold sm:text-4xl lg:text-5xl md:portrait:text-5xl "
           >
-            contact
+            contato
           </motion.h1>
 
           <motion.div variants={typographyAnimations}>
             <span className="md:text-lg xl:text-xl">
-              I also work with freelancing, feel free to share your idea and
-              build a solution along with me, my{" "}
+              Também trabalho com freelancing, sinta-se livre para compartilhar
+              sua ideia e construir uma solução junto à mim, minha{" "}
             </span>
             <span className="w-fit border-b border-background font-medium text-background md:text-lg xl:text-xl">
               <a href="mailto:olavo.dev@proton.me">inbox</a>
             </span>
-            <span className="md:text-lg xl:text-xl"> is always open :)</span>
+            <span className="md:text-lg xl:text-xl">
+              {" "}
+              está sempre aberta :)
+            </span>
           </motion.div>
         </motion.div>
       </div>

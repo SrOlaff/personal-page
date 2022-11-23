@@ -16,7 +16,7 @@ function App() {
       />
 
       <motion.div
-        className={`transition-all duration-300 md:blur-0
+        className={`transition-all duration-300 lg:blur-0
         ${isMobileMenuOpen && "blur"}`}
       >
         <Home />

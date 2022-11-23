@@ -8,9 +8,16 @@ export interface Experience {
 export const experiences = [
   {
     company: "F4A",
-    description:
-      "Here at Food for All - F4A, I develop solutions for all the production chains of the agronomical field, covering critical processes like pest control and maximum residue limit, seeking to transform the field into a more effective and productive one for all its contributors.",
-    period: "09/2022 - current",
+    description: `
+      Aqui na Food for All - F4A, desenvolvo soluções para toda as cadeia produtiva do ramo
+      agrícola, abrangendo processos críticos como controle de pragas e limite máximo de resíduos,
+      buscando transformar o campo em uma área mais eficaz e produtiva para todos os seus
+      colaboradores.
+
+      Com esse objetivo, atuo desenvolvendo aplicativos Android e iOS (em React Native) e sistemas
+      Backoffice (em ReactJS) que servem como fonte de alimentação para tais aplicações.
+    `,
+    period: "09/2022 - atualmente",
     skills: [
       "ReactJS",
       "React Native",
@@ -21,9 +28,9 @@ export const experiences = [
     ],
   },
   {
-    company: "Autonomo",
-    description:
-      "As an autonomous worker I have created many personal websites and minor web apps to fulfil the specific needs of my clients, like some small ERPs.",
+    company: "Autônomo",
+    description: `Como trabalhador autônomo, criei muitos sites pessoais e pequenos aplicativos web, que
+      atendiam às necessidades específicas dos meus clientes, tais quais alguns pequenos ERPs.`,
     period: "11/2021 - 09/2022",
     skills: ["ReactJS", "Styled Components", "Firebase"],
   },

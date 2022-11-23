@@ -10,7 +10,7 @@ import {
 function Me() {
   return (
     <motion.div
-      className="container mx-auto flex min-h-screen flex-col justify-evenly  overflow-hidden py-10 px-5 lg:h-screen"
+      className="container mx-auto flex min-h-screen flex-col justify-evenly overflow-hidden py-10 px-5 lg:h-[110vh] "
       id="me"
       transition={{
         staggerChildren: 0.3,
@@ -21,14 +21,16 @@ function Me() {
     >
       <motion.div className="my-10 text-text" variants={typographyAnimations}>
         <h2 className="mb-5 w-fit border-b border-accent text-3xl font-bold sm:text-4xl lg:text-5xl  md:portrait:text-5xl">
-          me
+          eu
         </h2>
         <p className="text-justify md:text-lg xl:text-xl ">
-          Hello! My name is Pedro Olavo, I&apos;mm 18 years old and I have
-          worked in the tech industry as a Software developer for a year. Ever
-          since my early days I was deeply passionate about technology, and it
-          has always been my dream to contribute to the upcoming changes in the
-          world.
+          Olá! Me chamo Pedro Olavo, tenho dezoito anos e atuo na indústria da
+          tecnologia, como desenvolvedor frontend, há um ano. Desde cedo, sempre
+          fui profundamente apaixonado por inovações e naturalmente curioso em
+          saber como as mesmas funcionavam. Essa paixão me levou a estudar
+          desenvolvimento de software aos meus dezesseis anos, e aos meus
+          dezessete consegui o meu primeiro emprego como desenvolvedor, daí
+          então, comecei a construir produtos para o grande público.
         </p>
       </motion.div>
 
@@ -37,7 +39,7 @@ function Me() {
         variants={typographyAnimations}
       >
         <motion.h2 className="mb-5 w-fit border-b border-accent py-1 text-3xl font-bold text-text sm:text-4xl md:mb-8 lg:text-5xl 2xl:py-3 md:portrait:text-5xl">
-          experience
+          experiência
         </motion.h2>
 
         <TabPanel />
@@ -55,7 +57,7 @@ function Me() {
             className="text-sm font-light text-text opacity-40 xl:text-lg"
             variants={checkoutSocialMediaAnimation}
           >
-            checkout my
+            se liga no meu
           </motion.p>
 
           <motion.span

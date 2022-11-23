@@ -50,12 +50,12 @@ function Header({ toggle, isOpen }: HeaderProps) {
           </motion.li>
           <motion.li variants={navItemAnimation}>
             <Link to="me" activeClass={!atBottom ? "active" : " "}>
-              me
+              eu
             </Link>
           </motion.li>
           <motion.li variants={navItemAnimation}>
             <Link to="contact" {...(atBottom && { forceActive: true })}>
-              contact
+              contato
             </Link>
           </motion.li>
         </motion.ul>
@@ -107,16 +107,16 @@ function Header({ toggle, isOpen }: HeaderProps) {
               onClick={() => toggle()}
               activeClass={!atBottom ? "active" : " "}
             >
-              me
+              eu
             </Link>
           </li>
           <li>
             <Link
               to="contact"
               onClick={() => toggle()}
-              className={atBottom ? "active" : ""}
+              className={atBottom ? "active" : " "}
             >
-              contact
+              contato
             </Link>
           </li>
         </ul>

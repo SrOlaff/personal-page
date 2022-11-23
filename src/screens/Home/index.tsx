@@ -19,7 +19,7 @@ function Home() {
       className="container mx-auto flex h-screen portrait:flex-col-reverse landscape:flex-row"
       id="home"
     >
-      <div className="flex justify-center lg:flex-1 lg:items-center portrait:h-1/3 landscape:h-full ">
+      <div className="flex justify-center lg:items-center xl:flex-1 portrait:h-1/3 landscape:h-full ">
         <motion.div
           transition={{
             delayChildren: 1.5,
@@ -48,11 +48,11 @@ function Home() {
         </motion.div>
       </div>
 
-      <div className="flex flex-1 justify-center portrait:items-end ">
+      <div className="flex flex-1 justify-center portrait:items-end">
         <motion.img
-          className="w-full opacity-0 md:w-3/4 lg:w-full 2xl:w-10/12"
+          className="w-full opacity-0 md:w-3/4 2xl:w-4/5"
           src="/pc-guy.svg"
-          alt="Person with a laptop on his lap"
+          alt="Pessoa com laptop no colo."
           initial="hidden"
           animate={animationControls}
           variants={illustrationAnimation}
