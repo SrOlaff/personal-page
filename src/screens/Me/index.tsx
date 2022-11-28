@@ -20,7 +20,7 @@ function Me() {
       viewport={{ once: true, amount: 0.4 }}
     >
       <motion.div className="my-10 text-text" variants={typographyAnimations}>
-        <h2 className="mb-5 w-fit border-b border-accent text-3xl font-bold sm:text-4xl lg:text-5xl 2xl:text-6xl md:portrait:text-5xl">
+        <h2 className="mb-5 w-fit border-b border-accent text-3xl font-bold sm:text-4xl md:portrait:text-5xl lg:text-5xl 2xl:text-6xl">
           me
         </h2>
         <p className="text-justify md:text-lg xl:text-xl 2xl:text-2xl">
@@ -36,7 +36,7 @@ function Me() {
         className="flex flex-1 flex-col"
         variants={typographyAnimations}
       >
-        <motion.h2 className="mb-5 w-fit border-b border-accent py-1 text-3xl font-bold text-text sm:text-4xl md:mb-8 lg:text-5xl 2xl:py-3 2xl:text-6xl md:portrait:text-5xl">
+        <motion.h2 className="mb-5 w-fit border-b border-accent py-1 text-3xl font-bold text-text sm:text-4xl md:mb-8 md:portrait:text-5xl lg:text-5xl 2xl:py-3 2xl:text-6xl">
           experience
         </motion.h2>
 

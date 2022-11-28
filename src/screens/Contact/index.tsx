@@ -20,7 +20,7 @@ function Contact() {
         >
           <motion.h1
             variants={typographyAnimations}
-            className="mb-5 text-center text-3xl font-bold sm:text-4xl lg:text-5xl 2xl:text-6xl md:portrait:text-5xl "
+            className="mb-5 text-center text-3xl font-bold sm:text-4xl md:portrait:text-5xl lg:text-5xl 2xl:text-6xl "
           >
             contact
           </motion.h1>

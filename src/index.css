@@ -11,15 +11,12 @@ body {
   box-sizing: border-box;
 }
 
-
 .active {
-  color: #FFFCF7;
-
+  color: #fffcf7;
 }
 
 @media (min-width: 1024px) {
   .active {
-    color: #F37748;
+    color: #f37748;
   }
-
 }
