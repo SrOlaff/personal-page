@@ -6,8 +6,8 @@ interface SkillPillProps {
 
 function SkillPill({ name }: SkillPillProps) {
   return (
-    <div className="w-full rounded-full border border-accent py-2 text-center text-xs text-accent transition-colors duration-200  hover:bg-accent hover:text-text md:text-sm">
-      <p className="font-semibold">{name}</p>
+    <div className="w-full rounded-full bg-accent py-2 text-center text-xs text-text transition-colors duration-200 md:text-sm xl:py-3">
+      <p className="font-semibold text-[#FDE2D8]">{name}</p>
     </div>
   );
 }

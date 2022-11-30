@@ -9,8 +9,8 @@ function TabPanel() {
   );
 
   return (
-    <div className="h-full lg:grid lg:h-3/5 lg:grid-cols-3 lg:grid-rows-1 xl:h-3/4">
-      <div className="flex h-16 lg:block lg:h-auto">
+    <div className="mb-2 flex flex-col xl:grid xl:flex-1 xl:grid-cols-4 xl:grid-rows-1">
+      <div className="ml-5 flex overflow-scroll rounded-sm pr-5 text-text xl:col-end-2 xl:ml-5 xl:h-3/4 xl:flex-col xl:border-r xl:border-accent xl:pr-0 ">
         {experiences.map((experience) => {
           return (
             <ListItem
@@ -22,24 +22,32 @@ function TabPanel() {
         })}
       </div>
 
-      <div className="lg:col-span-2 lg:grid lg:grid-rows-5">
-        <div className="text center row-span-3 py-5 lg:py-0 lg:px-6 lg:pb-5">
-          <h1 className="text-center text-2xl font-bold text-accent xl:text-3xl">
-            {experienceSelected.company}
-          </h1>
-          <h2 className="mb-5 text-center text-sm font-medium text-text opacity-40 xl:text-base ">
-            {experienceSelected.period}
-          </h2>
-          <p className="text-justify text-text xl:text-lg ">
+      <div className="xl:col-span-3 xl:flex xl:max-h-full xl:flex-col">
+        <div className="py-5 px-5 xl:flex-1 xl:overflow-y-scroll xl:px-8">
+          <div className="mb-2 space-y-2 text-center">
+            <a
+              className="text-center text-lg font-bold text-accent underline xl:text-2xl 2xl:text-4xl"
+              target="_blank"
+              rel="noreferrer"
+              href={experienceSelected.linkedin.link}
+            >
+              {experienceSelected.linkedin.at}
+            </a>
+
+            <p className="text-sm text-neutral-400 xl:text-lg 2xl:text-2xl">
+              {experienceSelected.period}
+            </p>
+          </div>
+
+          <p className="text-justify text-text xl:text-lg 2xl:text-2xl">
             {experienceSelected.description}
           </p>
         </div>
 
-        <div className="row-span-2 text-center">
-          <h1 className="mb-5 text-center text-2xl font-bold text-accent xl:text-3xl">
+        <div className="py-5 px-5 xl:flex-1 xl:px-8">
+          <h1 className="mb-4 text-center text-lg font-bold text-accent xl:text-2xl 2xl:text-4xl">
             Skills
           </h1>
-
           <div className="grid grid-cols-2 place-content-center gap-2 lg:grid-cols-3 lg:gap-4 lg:px-6">
             {experienceSelected.skills.map((skill) => (
               <SkillPill name={skill} />
